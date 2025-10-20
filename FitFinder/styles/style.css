@@ -1,0 +1,374 @@
+:root {
+    --dark-blue-1: #080C25;
+    --dark-blue-2: #161E35;
+    --bright-blue: #3071E7;
+    --lavender-blue: #A6B2EC;
+    --white: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(180deg, var(--dark-blue-2), var(--dark-blue-1));
+    color: var(--white);
+    min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--dark-blue-2);
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 28px;
+    color: var(--bright-blue);
+}
+.logo span {
+    color: var(--lavender-blue);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: var(--dark-blue-1);
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 300px;
+}
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    padding: 5px;
+}
+.search-box button {
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-icons i {
+    font-size: 22px;
+    color: #FFD700;
+    cursor: pointer;
+}
+
+.login-btn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    background-color: var(--bright-blue);
+    color: var(--white);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.login-btn:hover {
+    background-color: #4a8eff;
+    transform: scale(1.05);
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr 250px;
+    gap: 20px;
+    padding: 20px 40px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    background: var(--dark-blue-1);
+    border-radius: 20px;
+    padding: 20px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar li {
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sidebar li:hover {
+    color: var(--bright-blue);
+}
+
+.sidebar li i {
+    font-size: 20px;
+    color: var(--bright-blue);
+}
+
+/* ===== SECCIÓN CENTRAL ===== */
+.main-content {
+    text-align: center;
+}
+.title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 48px;
+    color: var(--white);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.title span {
+    color: var(--bright-blue);
+}
+
+/* ===== CARRUSEL ===== */
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.card {
+    width: 150px;
+    height: 120px;
+    background: var(--dark-blue-2);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+}
+.card:hover {
+    transform: scale(1.05);
+    background: var(--bright-blue);
+}
+
+/* ===== ANUNCIO ===== */
+.ad-section {
+    background: var(--dark-blue-1);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.ad-box {
+    background: var(--dark-blue-2);
+    height: 200px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+/* ===== MODAL DE AUTENTICACIÓN ===== */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--dark-blue-2);
+    padding: 20px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.close-btn {
+    color: var(--lavender-blue);
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-btn:hover {
+    color: var(--white);
+}
+
+.auth-view {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+}
+
+.left-panel {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.left-panel h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.left-panel p {
+    color: var(--lavender-blue);
+    margin-bottom: 25px;
+}
+
+.google-login-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--dark-blue-1);
+    color: var(--white);
+    border: 1px solid var(--lavender-blue);
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+.google-login-btn:hover {
+    background-color: #2a3352;
+}
+
+.right-panel {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.right-panel .input-group {
+    margin-bottom: 20px;
+}
+.right-panel .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--lavender-blue);
+}
+
+.right-panel input {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(8, 12, 37, 0.6);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+.right-panel input:focus {
+    outline: none;
+    border-color: var(--lavender-blue);
+}
+
+.right-panel button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--lavender-blue);
+    border: none;
+    border-radius: 10px;
+    color: var(--dark-blue-1);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.right-panel button:hover {
+    background-color: var(--white);
+}
+
+.form-toggle-text {
+    font-size: 14px;
+}
+.form-toggle-text a {
+    color: var(--bright-blue);
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+.form-toggle-text a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===== ICONOS ===== */
+.sidebar li i, .header-icons i, .search-box button i {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .sidebar ul {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .auth-view {
+        flex-direction: column;
+    }
+    .left-panel {
+        padding-right: 0;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+    .header-icons {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .container {
+        padding: 20px;
+    }
+    .search-box {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .title {
+        font-size: 36px;
+    }
+    .auth-view {
+        gap: 15px;
+    }
+}
