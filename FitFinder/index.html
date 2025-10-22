@@ -4,167 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fit Finder</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Q5h7H0sG0DFzpJxD5f2Wqkzq/XLw8+6ehX0RjFfGzOXFz6PZzQ6H3YwTPY4Tr3cOZ+6b/NtnZ9KfSpJ3+YpmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Conectamos el archivo CSS -->
+    <link rel="stylesheet" href="styles/style.css"> 
+    
+    <!-- Íconos we-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="top-bar">
-        <div class="logo">Fit<span>Finder</span></div>
+    <!-- Encabezado de la página -->
+    <header class="header">
+        <nav class="nav">
+            <!-- logo de la página -->
+            <div class="logo">Fit Finder</div>
 
-        <div class="search-box">
-            <input type="text" placeholder="Buscar...">
-            <button><i class="fas fa-magnifying-glass"></i></button>
-        </div>
-
-        <div class="header-icons">
-            <div class="bell"><i class="fas fa-bell"></i></div>
-            <button class="login-btn" id="login-modal-btn">Acceder</button>
-        </div>
+            <!-- Menú de navegación -->
+            <ul class="nav-links">
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Acerca De</a></li>
+                <li><a href="#">Servicio</a></li>
+                <li><a href="#" class="btn-login">Log in</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- CONTENEDOR PRINCIPAL -->
-    <main class="container">
-        <aside class="sidebar">
-            <ul>
-                <li><i class="fas fa-calendar"></i> Eventos</li>
-                <li><i class="fas fa-comments"></i> Chat</li>
-                <li><i class="fas fa-gear"></i> Configuración</li>
-            </ul>
-        </aside>
-
-        <section class="main-content">
-            <h1 class="title">Fit <span>Finder</span></h1>
-            <div class="carousel">
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-            </div>
-        </section>
-
-        <aside class="ad-section">
-            <h3>Anuncio</h3>
-            <div class="ad-box"></div>
-        </aside>
+    <!-- Sección principal (parte de presentación o portada) -->
+    <main class="hero">
+        <br>
+        <h1>Fit Finder</h1>
+        <br>
+        <p>Aquí encontrarás las rutinas, consejos y motivación que necesitas para cumplir tus objetivos.</p>
+        <a href="#features" class="btn-primary">Más información</a>
     </main>
 
-    <!-- MODAL DE AUTENTICACIÓN -->
-    <div id="auth-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            
-            <!-- Vista de Login -->
-            <div id="login-view" class="auth-view">
-                <div class="left-panel">
-                    <h2>Vamos</h2>
-                    <p>¡Hola! Nos alegra volver a verte en FitFinder.<br>¡A entrenar y alcanzar tus metas!</p>
-                    <button class="google-login-btn">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48">
-                            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8
-                            c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12
-                            c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657
-                            C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,
-                            4,24c0,11.045,8.955,20,20,20c11.045,0,
-                            20-8.955,20-20C44,22.659,43.862,21.35,
-                            43.611,20.083z"></path>
-                            <path fill="#FF3D00"
-                            d="M6.306,14.691l6.571,4.819C14.655,15.108,
-                            18.961,12,24,12c3.059,0,5.842,1.154,
-                            7.961,3.039l5.657-5.657C34.046,6.053,
-                            29.268,4,24,4C16.318,4,9.656,8.337,
-                            6.306,14.691z"></path>
-                            <path fill="#4CAF50"
-                            d="M24,44c5.166,0,9.86-1.977,
-                            13.409-5.192l-6.19-5.238C29.211,35.091,
-                            26.715,36,24,36c-5.222,0-9.619-3.317-11.283-7.946
-                            l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path>
-                            <path fill="#1976D2"
-                            d="M43.611,20.083H42V20H24v8h11.303
-                            c-0.792,2.237-2.231,4.166-4.087,5.571
-                            l6.19,5.238C42.022,36.218,44,30.561,
-                            44,24C44,22.659,43.862,21.35,
-                            43.611,20.083z"></path>
-                        </svg>
-                        Google
-                    </button>
-                    <p class="form-toggle-text">¿No tienes cuenta? <a id="show-signup">Regístrate</a></p>
-                </div>
+    <!-- Sección con características o servicios -->
+    <section id="features" class="features">
 
-                <div class="right-panel">
-                    <form id="login-form">
-                        <div class="input-group">
-                            <label for="login-email">E-Mail</label>
-                            <input type="email" id="login-email" placeholder="e.g., fitfinder@gmail.com" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="login-password">Password</label>
-                            <input type="password" id="login-password" placeholder="e.g., ••••••••••••" required>
-                        </div>
-                        <button type="submit">LOGIN</button>
-                    </form>
-                </div>
+        <!-- Tarjeta 1 -->
+        <div class="feature-card">
+            <div class="icon">
+                <i class="fas fa-dumbbell"></i> 
             </div>
-
-            <!-- Vista de Registro -->
-            <div id="signup-view" class="auth-view hidden">
-                 <div class="left-panel">
-                    <h2>Regístrate</h2>
-                    <p>Crea tu cuenta y únete a FitFinder<br>Aquí encontrarás las rutinas,<br> consejos y motivación que necesitas para cumplir tus objetivos fitness.<br> ¡Vamos por esos resultados!</p>
-                    <button class="google-login-btn">Google</button>
-                    <p class="form-toggle-text">¿Ya tienes cuenta? <a id="show-login">Inicia Sesión</a></p>
-                </div>
-
-                <div class="right-panel">
-                    <form id="signup-form">
-                        <div class="input-group">
-                             <label for="signup-email">E-Mail</label>
-                            <input type="email" id="signup-email" placeholder="e.g., fitfinder@gmail.com" required>
-                        </div>
-                        <div class="input-group">
-                             <label for="signup-password">Password</label>
-                            <input type="password" id="signup-password" placeholder="e.g., ••••••••••••" required>
-                        </div>
-                        <button type="submit">REGISTRATE AQUÍ</button>
-                    </form>
-                </div>
-            </div>
+            <h3>Estrategias de entrenamiento</h3>
+            <p>Planes y guías para optimizar tu rutina.</p>
         </div>
-    </div>
 
-    <!-- JS -->
-    <script>
-        const modal = document.getElementById('auth-modal');
-        const openModalBtn = document.getElementById('login-modal-btn');
-        const closeModalBtn = document.querySelector('.close-btn');
-        
-        const loginView = document.getElementById('login-view');
-        const signupView = document.getElementById('signup-view');
-        
-        const showSignupLink = document.getElementById('show-signup');
-        const showLoginLink = document.getElementById('show-login');
+        <!-- Tarjeta 2 -->
+        <div class="feature-card">
+            <div class="icon">
+                <i class="fas fa-users"></i> 
+            </div>
+            <h3>Relacionarse con gente que le guste</h3>
+            <p>Conecta con la comunidad deportiva.</p>
+        </div>
 
-        openModalBtn.onclick = () => modal.style.display = "flex";
-        closeModalBtn.onclick = () => modal.style.display = "none";
+        <!-- Tarjeta 3 -->
+        <div class="feature-card">
+            <div class="icon">
+                <i class="fas fa-calendar-alt"></i> 
+            </div>
+            <h3>Eventos deportivos</h3>
+            <p>Descubre y participa en próximos eventos.</p>
+        </div>
+    </section>
 
-        window.onclick = e => { if (e.target == modal) modal.style.display = "none"; }
-
-        showSignupLink.onclick = e => {
-            e.preventDefault();
-            loginView.classList.add('hidden');
-            signupView.classList.remove('hidden');
-        }
-
-        showLoginLink.onclick = e => {
-            e.preventDefault();
-            signupView.classList.add('hidden');
-            loginView.classList.remove('hidden');
-        }
-    </script>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2025 Fit Finder. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
